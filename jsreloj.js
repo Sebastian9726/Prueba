@@ -60,8 +60,8 @@ window.onload = function() {
          var ultimaHora = document.getElementById( "ulho");
          ultimaHora.addEventListener("click", ultimaHo);
  
-         var ultimaVei = document.getElementById( "ulvei");
-         ultimaVei.addEventListener("click", ultimaVe);
+         /* var ultimaVei = document.getElementById( "ulvei");
+         ultimaVei.addEventListener("click", ultimaVe); */
       
 
  /* CAMBIAR GRAFICAS  */
@@ -117,25 +117,25 @@ var diasAntes=0;
 var fecha2  =new Date();
 if(restaTiempo<10){
  /*  diasAntes = fecha2.getDate(); */
-  horasdma = fecha2.getHours();
+   horasdma = fecha2.getHours();
   minudma = fecha2.getMinutes()-10;
   segminudma = fecha2.getSeconds();
-  horasDimiantes = /* diasAntes*3600*24 */ + horasdma*3600 + minudma*60 +segminudma
+  horasDimiantes = diasAntes*3600*24 + horasdma*3600 + minudma*60 +segminudma
 }
 if(restaTiempo>10 && restaTiempo<61){
   /* diasAntes = fecha2.getDate(); */
-  horasdma = fecha2.getHours();
+    horasdma = fecha2.getHours();
   minudma = fecha2.getMinutes()-60;
   segminudma = fecha2.getSeconds();
-  horasDimiantes = /* diasAntes*3600*24 */ + horasdma*3600 + minudma*60 +segminudma
+  horasDimiantes = diasAntes*3600*24 + horasdma*3600 + minudma*60 +segminudma
   console.log('ultima hora')
 }
 if(restaTiempo>62 && restaTiempo<1441){
   /* diasAntes = fecha2.getDate(); */
-  horasdma = fecha2.getHours()-24;
+    horasdma = fecha2.getHours()-24;
   minudma = fecha2.getMinutes();
   segminudma = fecha2.getSeconds();
-  horasDimiantes = /* diasAntes*3600*24  */+ horasdma*3600 + minudma*60 +segminudma
+  horasDimiantes = diasAntes*3600*24 + horasdma*3600 + minudma*60 +segminudma
   console.log('ultima hora')
 }
 
@@ -155,7 +155,7 @@ function secondsToString(seconds) {
   minute = (minute < 10)? '0' + minute : minute;
   var second = seconds % 60;
   second = (second < 10)? '0' + second : second;
-  return  /* dias */  hour + ':' + minute + ':' + second;
+  return  /* dias+ ':' */+hour + ':' + minute + ':' + second;
   
 }
  
@@ -211,13 +211,13 @@ yaxis: {
 Plotly.newPlot( 'chart', data, layout, [0]);
 
   inter = setInterval(function(){
-     var fecha3  =new Date(); 
+     /* var fecha3  =new Date();  */
     var dia = fecha3.getDate();
     var hor = fecha3.getHours();
      var minu = fecha3.getMinutes();
      var seg = fecha3.getSeconds();  
 var horasA
-        horasA =dia +':' + hor + ':' + minu + ':' + seg;
+        horasA =/* dia +':' */ + hor + ':' + minu + ':' + seg;
         var ale = (Math.random())*1000+200;
         arregloy.shift();
         arregloy.push(ale)
@@ -234,7 +234,7 @@ var horasA
     Plotly.newPlot('chart',data,layout, [0]);
    
  
-  },5000); 
+  },10000); 
 }
 
 
