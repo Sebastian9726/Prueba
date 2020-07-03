@@ -211,7 +211,7 @@ yaxis: {
 Plotly.newPlot( 'chart', data, layout, [0]);
 
   inter = setInterval(function(){
-     /* var fecha3  =new Date();  */
+      var fecha3  =new Date();  
     var dia = fecha3.getDate();
     var hor = fecha3.getHours();
      var minu = fecha3.getMinutes();
@@ -234,7 +234,7 @@ var horasA
     Plotly.newPlot('chart',data,layout, [0]);
    
  
-  },10000); 
+  },5000); 
 }
 
 
