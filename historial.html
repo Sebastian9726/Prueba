@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Electry</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+         <nav class="navbar navbar-expand-md navbar-dark bg-dark  fixed-top">
+      <a class="navbar-brand" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><img  src="Img/electrysi.png" width="40px" height="40px" ></font></font></a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Navegación de palanca">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Datos demanda</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(actual)</font></font></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/regresion.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Proyección de demanda</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/estado.html" tabindex="-1" aria-disabled="true"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estado</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reporte.html" tabindex="-1" aria-disabled="true"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reporte</font></font></a>
+          </li>
+        
+         </ul>
+              </div>
+    </nav>
+    
+    <main role="main" class=" ">
+     <br>
+     <br> 
+     <br> 
+    
+     <div class="row">
+       <div class="col text-center">   
+          
+        <div class="col">
+          <img src="/Img/ING.jpg" width="50px">
+        <h4 class="" id="nombre">Nombre</h4>
+        <!-- <h4 class="" id="correo">Correo</h4> -->
+        <h4  class="" id="iden">Id Electry</h4 >
+        </div>
+      </div>
+      
+     <!-- Hora -->
+     <div class="col">    
+      <div class="starter-template">
+        <div class="text-center">
+                <div id="reloj">
+                 <label>Fecha:</label>
+                 <div id="Fecha" style="display:inline-block"></div>
+                <div>
+                <label>Hora:</label>
+                 <div id="Hora"style="display:inline-block" ></div></div>
+                </div>
+        </div>
+      </div>
+    </div>        
+  </div> 
+    
+        
+      
+  <div class=" bg-secondary text-center ">
+         <br>      
+         <div class="row">
+           <div class="col-sm-2"></div>
+           <div class="col-sm text-center">
+         <button class="btn btn-success" id="uldi">Ultimos 10 minutos</button> 
+         <button class="btn btn-primary" id="ulho">Ultima Hora</button> 
+         <button class="btn btn-warning" id="ulvei">Ultimas 24 Horas </button> 
+         <button class="btn btn-info"id="ulsie">Ultimos 7 días </button> 
+         <button class="btn btn-dark" id="ultre">Ultimos 30 días </button> 
+        </div>
+         <div class="col-sm-2"></div>
+        </div>    
+       <!--grafica-->  
+       <div class="container" id="chart"></div>
+       <br>
+       <div class="row"> 
+         <br>
+       </div>
+  </div>
+        <script>
+        
+        </script>
+   
+
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="jsreloj.js"> </script>
+<style>
+    .carousel-inner img {
+    margin: auto;
+  }
+  </style>
+</body>
+</html>
